@@ -1,0 +1,20 @@
+version: '3'
+services:
+  nessus_img:
+    container_name: nessus_img
+    image: tenableofficial/nessus
+    # restart: "on-failure"
+    ports:
+      - 8834:8834
+    privileged: true
+    user: root
+    # environment:
+    #   - ACTIVATION_CODE=$ACTIVATION_CODE
+    #   - USERNAME=$USERNAME
+    #   - PASSWORD=$PASSWORD
+    #   - VIRTUAL_HOST=localhost
+#     volumes:
+#       - ./nessufiles:/opt/nessus/var/nessus
+    
+# volumes:
+#   nessufiles:
